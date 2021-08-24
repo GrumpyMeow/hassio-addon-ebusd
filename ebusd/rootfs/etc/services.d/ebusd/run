@@ -7,4 +7,4 @@
 
 bashio::log.info "Starting ebusd..."
 
-exec /usr/bin/ebusd --scanconfig --device=$(bashio::config 'device') --port=$(bashio::addon.port 8888/tcp) --httpport=$(bashio:addon.port 8080/tcp) --foreground
+exec /usr/bin/ebusd --scanconfig --device=$(bashio::config 'device') --port=$(bashio::addon.port '8888/tcp') --httpport=$(bashio:addon.port '8080/tcp') --foreground
