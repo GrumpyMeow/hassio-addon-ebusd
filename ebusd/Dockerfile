@@ -1,14 +1,14 @@
-ARG BUILD_FROM=john30/ebusd:v21.2-amd64
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:5.0.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
 # Copy root filesystem
 COPY rootfs /
 
-# Setup base
-#RUN apk add --no-cache \
-#    coreutils=8.32-r2 \
-#    wget=1.21.1-r1
+RUN wget -qO - https://raw.githubusercontent.com/john30/ebusd-debian/master/ebusd.gpg.key|apt-key add -
+RUN wget -O /etc/apt/sources.list.d/ebusd.list https://raw.githubusercontent.com/john30/ebusd-debian/master/ebusd-default-buster.list
+RUN apt-get update
+RUN apt-get install ebusd
 
 # Build arguments
 ARG BUILD_ARCH

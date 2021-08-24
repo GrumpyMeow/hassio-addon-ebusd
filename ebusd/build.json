@@ -1,7 +1,9 @@
 {
   "build_from": {
-    "amd64": "john30/ebusd:v21.2-amd64",
-    "armv7": "john30/ebusd:v21.2-arm32v7",    
-    "i386": "john30/ebusd:v21.2-i386"
+    "aarch64": "ghcr.io/hassio-addons/debian-base/aarch64:5.0.0",
+    "amd64": "ghcr.io/hassio-addons/debian-base/amd64:5.0.0",
+    "armhf": "ghcr.io/hassio-addons/debian-base/armhf:5.0.0",
+    "armv7": "ghcr.io/hassio-addons/debian-base/armv7:5.0.0",
+    "i386": "ghcr.io/hassio-addons/debian-base/i386:5.0.0"
   }
 }
