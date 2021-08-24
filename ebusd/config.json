@@ -1,7 +1,7 @@
 {
   "name": "ebusd",
   "version": "v21.2",
-  "slug": "eBUSdaemon",
+  "slug": "ebusd",
   "description": "eBUS daemon add-on by Community Home Assistant Add-ons",
   "url": "https://github.com/GrumpyMeow/hassio-addon-ebusd",
   "init": false,
