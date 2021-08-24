@@ -2,8 +2,10 @@ ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:5.0.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
+ENV LANG C.UTF-8
+
 # Copy root filesystem
-#COPY rootfs /
+COPY rootfs /
 
 RUN apt update
 RUN apt install -y wget gnupg

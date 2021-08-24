@@ -20,7 +20,6 @@
   "options": {
     "data_path": "/config/ebusd",
     "log_level": "info",
-    "seconds_between_quotes": 5,
     "mqtt": {
       "base_topic": "ebusd"
     },
@@ -30,7 +29,6 @@
   },
   "schema": {
     "log_level": "list(trace|debug|info|notice|warning|error|fatal)",
-    "seconds_between_quotes": "int(1,120)",
     "data_path": "str",
     "mqtt": {
       "base_topic": "str",

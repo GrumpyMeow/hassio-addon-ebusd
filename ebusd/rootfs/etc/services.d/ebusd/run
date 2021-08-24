@@ -1,0 +1,11 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Home Assistant Community Add-on: ebusd
+# Runs ebusd script
+# ==============================================================================
+
+
+bashio::log.info "Starting ebusd..."
+
+exec /usr/bin/ebusd --scanconfig --device=/dev/ttyUSB0 --port=8888 --httpport=8080 
+#--mqtttopic=ebusd --mqtthost=HOST --mqttport=1883 --mqttuser=USER --mqttpass=PASSWORD

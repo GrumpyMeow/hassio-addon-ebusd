@@ -35,7 +35,6 @@ Example add-on configuration:
 
 ```yaml
 log_level: info
-seconds_between_quotes: 5
 ```
 
 ### Option: `log_level`
@@ -55,12 +54,6 @@ Please note that each level automatically includes log messages from a
 more severe level, e.g., `debug` also shows `info` messages. By default,
 the `log_level` is set to `info`, which is the recommended setting unless
 you are troubleshooting.
-
-### Option: `seconds_between_quotes`
-
-Sets the number of seconds between the output of each quote. The value
-must be between `1` and `120` seconds. This value is set to `5` seconds by
-default.
 
 ## Changelog & Releases
 
