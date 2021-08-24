@@ -17,10 +17,9 @@
   "init": false,
   "arch": ["aarch64", "amd64", "armhf", "armv7", "i386"],
   "options": {
-    "ebus-device": "/dev/ttyUSB0"
+    "device": "/dev/ttyUSB0"
   },
   "schema": {
-    "ebus-device": "str"
-    }
+    "device": "str"
   }
 }
