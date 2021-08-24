@@ -1,8 +1,6 @@
 {
   "build_from": {
-    "arm64v8": "john30/ebusd:v21.2-arm64v8",
     "amd64": "john30/ebusd:v21.2-amd64",
-    "arm32v5": "john30/ebusd:v21.2-arm32v5",
     "armv7": "john30/ebusd:v21.2-arm32v7",    
     "i386": "john30/ebusd:v21.2-i386"
   }

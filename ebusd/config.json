@@ -22,6 +22,17 @@
     "log_level": "info",
     "seconds_between_quotes": 5,
     "mqtt": {
+      "base_topic": "ebusd"
+    },
+    "serial": {
+      "port": "/dev/ttyACM0"
+    }
+  },
+  "schema": {
+    "log_level": "list(trace|debug|info|notice|warning|error|fatal)",
+    "seconds_between_quotes": "int(1,120)",
+    "data_path": "str",
+    "mqtt": {
       "base_topic": "str",
       "server": "str?",
       "ca": "str?",
@@ -37,11 +48,7 @@
       "force_disable_retain": "bool?"
     },
     "serial": {
-      "port": "/dev/ttyACM0"
+      "port": "str"
     }
-  },
-  "schema": {
-    "log_level": "list(trace|debug|info|notice|warning|error|fatal)",
-    "seconds_between_quotes": "int(1,120)"
   }
 }
