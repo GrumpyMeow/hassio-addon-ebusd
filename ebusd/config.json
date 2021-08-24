@@ -3,12 +3,42 @@
   "version": "v21.2",
   "slug": "ebusd",
   "description": "eBUS daemon add-on by Community Home Assistant Add-ons",
+  "uart": true,
   "url": "https://github.com/GrumpyMeow/hassio-addon-ebusd",
+  "startup": "application",
+  "services": [
+    "mqtt:need"
+  ],
+  "ports": {
+    "8888/tcp": 8888
+  },
+  "ports_description": {
+    "8888/tcp": "Socat tcp-listen port"
+  },
   "init": false,
   "arch": ["amd64","armv7","i386"],
   "options": {
+    "data_path": "/config/ebusd",
     "log_level": "info",
-    "seconds_between_quotes": 5
+    "seconds_between_quotes": 5,
+    "mqtt": {
+      "base_topic": "str",
+      "server": "str?",
+      "ca": "str?",
+      "key": "str?",
+      "cert": "str?",
+      "user": "str?",
+      "password": "str?",
+      "client_id": "str?",
+      "keepalive": "int?",
+      "version": "int?",
+      "reject_unauthorized": "bool?",
+      "include_device_information": "bool?",
+      "force_disable_retain": "bool?"
+    },
+    "serial": {
+      "port": "/dev/ttyACM0"
+    }
   },
   "schema": {
     "log_level": "list(trace|debug|info|notice|warning|error|fatal)",
