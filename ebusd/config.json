@@ -10,10 +10,12 @@
     "mqtt:need"
   ],
   "ports": {
-    "8888/tcp": 8888
+    "8888/tcp": 8888,
+    "8080/tcp": 8080
   },
   "ports_description": {
-    "8888/tcp": "tcp-listen port"
+    "8888/tcp": "tcp-listen port",
+    "8080/tcp": "http port"
   },
   "init": false,
   "arch": ["aarch64", "amd64", "armhf", "armv7", "i386"],

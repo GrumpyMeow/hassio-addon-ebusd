@@ -7,5 +7,5 @@
 
 bashio::log.info "Starting ebusd..."
 
-exec /usr/bin/ebusd --scanconfig --device=/dev/ttyUSB0 --port=8888 --httpport=8080 
+exec /usr/bin/ebusd --scanconfig --device=/dev/ttyUSB0 --port=8888 --httpport=8080 --foreground
 #--mqtttopic=ebusd --mqtthost=HOST --mqttport=1883 --mqttuser=USER --mqttpass=PASSWORD
