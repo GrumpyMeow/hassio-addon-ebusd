@@ -3,12 +3,14 @@ ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:5.0.0
 FROM ${BUILD_FROM}
 
 # Copy root filesystem
-COPY rootfs /
+#COPY rootfs /
 
+RUN apt update
+RUN apt install -y wget gnupg
 RUN wget -qO - https://raw.githubusercontent.com/john30/ebusd-debian/master/ebusd.gpg.key|apt-key add -
 RUN wget -O /etc/apt/sources.list.d/ebusd.list https://raw.githubusercontent.com/john30/ebusd-debian/master/ebusd-default-buster.list
 RUN apt-get update
-RUN apt-get install ebusd
+RUN apt-get install -y ebusd
 
 # Build arguments
 ARG BUILD_ARCH
