@@ -12,7 +12,7 @@ RUN apt install -y wget gnupg
 RUN wget -qO - https://raw.githubusercontent.com/john30/ebusd-debian/master/ebusd.gpg.key|apt-key add -
 RUN wget -O /etc/apt/sources.list.d/ebusd.list https://raw.githubusercontent.com/john30/ebusd-debian/master/ebusd-default-buster.list
 RUN apt-get update
-RUN apt-get install -y ebusd
+RUN apt-get install -y ebusd=21.2
 
 # Build arguments
 ARG BUILD_ARCH
