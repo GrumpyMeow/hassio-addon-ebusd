@@ -1,10 +1,20 @@
 #!/usr/bin/with-contenv bashio
 # ==============================================================================
-# Home Assistant Community Add-on: ebusd
+# Home Assistant Add-on: eBUSd
 # Runs ebusd script
 # ==============================================================================
 
 
 bashio::log.info "Starting ebusd..."
 
-exec /usr/bin/ebusd --scanconfig --device=$(bashio::config 'device') --port=$(bashio::addon.port '8888/tcp') --foreground
+exec /usr/bin/ebusd \
+    --scanconfig \
+    --device=$(bashio::config 'device') \
+    --port=$(bashio::addon.port '8888/tcp') \
+    --foreground  \
+    --mqtttopic=$(bashio::config 'mqtt.topic') \
+    --mqtthost=$(bashio::config 'mqtt.host') \
+    --mqttport=$(bashio::config 'mqtt.port') \
+    --mqttuser=$(bashio::config 'mqtt.user') \
+    --mqttpass=$(bashio::config 'mqtt.pass')
+
