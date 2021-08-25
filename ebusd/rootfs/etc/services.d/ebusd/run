@@ -1,7 +1,7 @@
 #!/usr/bin/with-contenv bashio
 # ==============================================================================
 # Home Assistant Add-on: eBUSd
-# Runs ebusd script
+# Runs ebusd
 # ==============================================================================
 
 
@@ -17,4 +17,5 @@ exec /usr/bin/ebusd \
     --mqttport=$(bashio::config 'mqtt.port') \
     --mqttuser=$(bashio::config 'mqtt.user') \
     --mqttpass=$(bashio::config 'mqtt.pass')
+    --mqttversion=2.0
 
