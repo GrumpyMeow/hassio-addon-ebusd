@@ -16,5 +16,6 @@ exec /usr/bin/ebusd \
     --mqtthost=$(bashio::config 'mqtt.host') \
     --mqttport=$(bashio::config 'mqtt.port') \
     --mqttuser=$(bashio::config 'mqtt.user') \
-    --mqttpass=$(bashio::config 'mqtt.pass')
+    --mqttpass=$(bashio::config 'mqtt.pass') \
+    --mqttversion=1
 
