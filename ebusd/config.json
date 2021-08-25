@@ -22,7 +22,7 @@
   "options": {
     "device": "/dev/ttyUSB0",
     "mqtt": {
-      "topic": "ebusd/%circuit/%name",
+      "topic": "ebusd",
       "host": "localhost",
       "port": 1883,
       "user": "",
