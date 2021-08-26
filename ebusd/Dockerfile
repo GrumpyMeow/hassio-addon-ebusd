@@ -15,7 +15,7 @@ RUN apt-get update
 #RUN apt-get install -y ebusd=21.2
 
 # Temporary provision this Debian package
-RUN apt install -y logrotate
+RUN apt install -y logrotate libmosquitto1
 COPY ebusd-21.3_amd64_mqtt1.deb /ebusd-21.3_amd64_mqtt1.deb
 RUN dpkg -i /ebusd-21.3_amd64_mqtt1.deb
 
