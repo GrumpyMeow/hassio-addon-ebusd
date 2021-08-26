@@ -16,8 +16,8 @@ RUN apt-get update
 
 # Temporary provision this Debian package
 RUN apt install -y logrotate
-COPY ebusd-21.3_amd64.deb /ebusd-21.3_amd64.deb
-RUN dpkg -i /ebusd-21.3_amd64.deb
+COPY ebusd-21.3_amd64_mqtt1.deb /ebusd-21.3_amd64_mqtt1.deb
+RUN dpkg -i /ebusd-21.3_amd64_mqtt1.deb
 
 # Build arguments
 ARG BUILD_ARCH
