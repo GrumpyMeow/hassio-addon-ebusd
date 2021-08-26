@@ -15,8 +15,8 @@ COPY rootfs /
 #RUN apt-get install -y ebusd=21.2
 
 # Temporary provision this Debian package
-COPY ebusd-21.3_amd64.deb .
-RUN dpkg -i ebusd-21.3_amd64.deb
+COPY ebusd-21.3_amd64.deb /ebusd-21.3_amd64.deb
+RUN dpkg -i /ebusd-21.3_amd64.deb
 
 # Build arguments
 ARG BUILD_ARCH
