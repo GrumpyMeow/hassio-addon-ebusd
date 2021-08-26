@@ -7,14 +7,15 @@ ENV LANG C.UTF-8
 # Copy root filesystem
 COPY rootfs /
 
-#RUN apt update
-#RUN apt install -y wget gnupg
-#RUN wget -qO - https://raw.githubusercontent.com/john30/ebusd-debian/master/ebusd.gpg.key|apt-key add -
-#RUN wget -O /etc/apt/sources.list.d/ebusd.list https://raw.githubusercontent.com/john30/ebusd-debian/master/ebusd-default-buster.list
-#RUN apt-get update
+RUN apt update
+RUN apt install -y wget gnupg
+RUN wget -qO - https://raw.githubusercontent.com/john30/ebusd-debian/master/ebusd.gpg.key|apt-key add -
+RUN wget -O /etc/apt/sources.list.d/ebusd.list https://raw.githubusercontent.com/john30/ebusd-debian/master/ebusd-default-buster.list
+RUN apt-get update
 #RUN apt-get install -y ebusd=21.2
 
 # Temporary provision this Debian package
+RUN apt install -y logrotate
 COPY ebusd-21.3_amd64.deb /ebusd-21.3_amd64.deb
 RUN dpkg -i /ebusd-21.3_amd64.deb
 
