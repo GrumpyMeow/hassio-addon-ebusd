@@ -1,6 +1,6 @@
 {
   "name": "eBUSd",
-  "version": "v21.2",
+  "version": "v21.3",
   "slug": "ebusd",
   "description": "eBUS daemon add-on",
   "uart": true,
