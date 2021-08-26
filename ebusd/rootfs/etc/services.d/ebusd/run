@@ -12,10 +12,7 @@ exec /usr/bin/ebusd \
     --device=$(bashio::config 'device') \
     --port=$(bashio::addon.port '8888/tcp') \
     --foreground  \
-    --mqtttopic=$(bashio::config 'mqtt.topic') \
-    --mqtthost=$(bashio::config 'mqtt.host') \
-    --mqttport=$(bashio::config 'mqtt.port') \
-    --mqttuser=$(bashio::config 'mqtt.user') \
-    --mqttpass=$(bashio::config 'mqtt.pass')
-    --mqttversion=2.0
-
+    --mqtthost=$(bashio::services mqtt "host") \
+    --mqttport=$(bashio::services mqtt "port") \
+    --mqttuser=$(bashio::services mqtt "username") \
+    --mqttpass=$(bashio::services mqtt "password")
