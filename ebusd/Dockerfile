@@ -8,7 +8,7 @@ ENV LANG C.UTF-8
 COPY rootfs /
 
 RUN apt update
-RUN apt install -y wget gnupg
+RUN apt install -y wget gnupg netcat
 RUN wget -qO - https://raw.githubusercontent.com/john30/ebusd-debian/master/ebusd.gpg.key|apt-key add -
 RUN wget -O /etc/apt/sources.list.d/ebusd.list https://raw.githubusercontent.com/john30/ebusd-debian/master/ebusd-default-buster.list
 RUN apt-get update
