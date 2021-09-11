@@ -5,16 +5,19 @@
 # ==============================================================================
 
 
-bashio::log.info "Starting ebusd..."
 
-if [ -d /data/ebusd-configuration ]; 
+
+EBUSDCONFIGPATH = "http://ebusd.eu/config/";
+if [ -d /config/ebusd-configuration ]; 
 then 
-    if [ -d /etc/ebusd ]; then sudo mv /etc/ebusd /etc/ebusd.old; fi
-    sudo ln -s /data/ebusd-configuration/ebusd-2.1.x/de /etc/ebusd
+    EBUSDCONFIGPATH = "/config/ebusd-configuration";
 fi
 
+bashio::log.info "Using eBUSd configuration path: '${EBUSDCONFIGPATH}'"
+bashio::log.info "Starting ebusd..."
 exec /usr/bin/ebusd \
     --scanconfig \
+    --configpath ${EBUSDCONFIGPATH}
     --device=$(bashio::config 'device') \
     --port=$(bashio::addon.port '8888/tcp') \
     --foreground  \
