@@ -8,9 +8,9 @@
 
 
 EBUSDCONFIGPATH="http://ebusd.eu/config/";
-if [ -d /config/ebusd-configuration ]; 
+if [ -d /config/ebusd-configuration/ebusd-2.1.x/de ]; 
 then 
-    EBUSDCONFIGPATH="/config/ebusd-configuration";
+    EBUSDCONFIGPATH="/config/ebusd-configuration/ebusd-2.1.x/de";
 fi
 
 bashio::log.info "Using eBUSd configuration path: '${EBUSDCONFIGPATH}'"
