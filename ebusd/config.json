@@ -22,6 +22,9 @@
   "options": {
     "device": "/dev/ttyUSB0"    
   },
+  "map": [
+    "config", "addons"
+  ],
   "schema": {
     "device": "str"    
   }
