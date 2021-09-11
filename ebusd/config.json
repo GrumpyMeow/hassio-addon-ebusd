@@ -23,7 +23,7 @@
     "device": "/dev/ttyUSB0"    
   },
   "map": [
-    "config", "addons"
+    "config", "addons", "share"
   ],
   "schema": {
     "device": "str"    
