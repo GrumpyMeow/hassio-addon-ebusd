@@ -7,6 +7,12 @@
 
 bashio::log.info "Starting ebusd..."
 
+if [ -d /data/ebusd-configuration ]; 
+then 
+    if [ -d /etc/ebusd ]; then sudo mv /etc/ebusd /etc/ebusd.old; fi
+    sudo ln -s /data/ebusd-configuration/ebusd-2.1.x/de /etc/ebusd
+fi
+
 exec /usr/bin/ebusd \
     --scanconfig \
     --device=$(bashio::config 'device') \
