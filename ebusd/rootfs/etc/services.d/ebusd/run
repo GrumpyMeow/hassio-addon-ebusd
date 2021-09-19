@@ -22,6 +22,7 @@ exec /usr/bin/ebusd \
     --device=$(bashio::config 'device') \
     --port=$(bashio::addon.port '8888/tcp') \
     --updatecheck=off \
+    --enablehex \
     --mqttretain \
     --httpport=8889 \
     --mqtthost=$(bashio::services mqtt "host") \
