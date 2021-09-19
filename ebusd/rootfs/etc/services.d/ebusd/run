@@ -21,7 +21,8 @@ exec /usr/bin/ebusd \
     --configpath "${EBUSDCONFIGPATH}" \
     --device=$(bashio::config 'device') \
     --port=$(bashio::addon.port '8888/tcp') \
-    --mqttlog \
+    --updatecheck=off \
+    --mqttretain \
     --mqtthost=$(bashio::services mqtt "host") \
     --mqttport=$(bashio::services mqtt "port") \
     --mqttuser=$(bashio::services mqtt "username") \
