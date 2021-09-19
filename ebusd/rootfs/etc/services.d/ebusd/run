@@ -23,7 +23,7 @@ exec /usr/bin/ebusd \
     --port=$(bashio::addon.port '8888/tcp') \
     --updatecheck=off \
     --mqttretain \
-    --httpport=8080 \
+    --httpport=8889 \
     --mqtthost=$(bashio::services mqtt "host") \
     --mqttport=$(bashio::services mqtt "port") \
     --mqttuser=$(bashio::services mqtt "username") \
