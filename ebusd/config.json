@@ -6,6 +6,8 @@
   "uart": true,
   "url": "https://github.com/GrumpyMeow/hassio-addon-ebusd",
   "startup": "application",
+  "ingress": true,
+  "ingress_port": 8889,
   "services": [
     "mqtt:want"
   ],
