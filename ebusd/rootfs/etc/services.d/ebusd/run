@@ -25,7 +25,10 @@ exec /usr/bin/ebusd \
     --enablehex \
     --mqttretain \
     --httpport=8889 \
-    --mqtthost=$(bashio::services mqtt "host") \
-    --mqttport=$(bashio::services mqtt "port") \
-    --mqttuser=$(bashio::services mqtt "username") \
-    --mqttpass=$(bashio::services mqtt "password")
+    --mqtthost=192.168.178.14 \
+    --mqttport=1883
+
+#    --mqtthost=$(bashio::services mqtt "host") \
+#    --mqttport=$(bashio::services mqtt "port") \
+#    --mqttuser=$(bashio::services mqtt "username") \
+#    --mqttpass=$(bashio::services mqtt "password")
